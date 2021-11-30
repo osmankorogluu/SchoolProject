@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Entities
+namespace Bussiness
 {
     public class Class1
     {
-        //cat
     }
 }
