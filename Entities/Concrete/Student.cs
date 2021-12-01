@@ -13,6 +13,7 @@ namespace Entities.Concrete
         public int TeacherId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public int IdentificationNumber { get; set; }
         public int Class { get; set; }
         public string Gender { get; set; }
         public string District { get; set; }

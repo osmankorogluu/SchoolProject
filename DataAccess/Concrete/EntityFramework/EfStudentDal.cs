@@ -36,6 +36,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  Section = c.Section,
                                  Name = c.Name,
                                  Phone = c.Phone,
+                                 IdentificationNumber=c.IdentificationNumber,
 
                              };
                 return result.ToList();
