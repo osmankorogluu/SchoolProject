@@ -1,9 +1,12 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.FluentValidation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +30,7 @@ namespace Business.Concrete
 
         public IResult Add(Student student)
         {
+            ValidationTool.Validate(new StudentValidator(), student);
             _studentDal.Add(student);
             return new SuccessResult(Messages.StudentAdded);
         }
@@ -53,7 +57,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<StudentDetailDto>>(_studentDal.GetStudentDetails(), Messages.StudentListed);
         }
 
-      
+
 
     }
 }

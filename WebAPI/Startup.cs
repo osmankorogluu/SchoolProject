@@ -32,8 +32,8 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             //Student
-            services.AddSingleton<IStudentService, StudentManager>();
-            services.AddSingleton<IStudentDal, EfStudentDal>();
+           // services.AddSingleton<IStudentService, StudentManager>();
+           // services.AddSingleton<IStudentDal, EfStudentDal>();
 
             //Teacher
             //services.AddSingleton<ITeacherService, TeacherManager>();
