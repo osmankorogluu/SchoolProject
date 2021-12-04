@@ -23,5 +23,14 @@ namespace Business.Constants
         public static string TeacherDetail = "Öğretmen detayı getirildi";
         public static string TeacherNameInvalid = "Öğretmen ismi geçersiz";
         public static string TeacherListed = "Öğretmen listelendi";
+
+
+        //Guardian
+        public static string ParentAdded = "Veli Eklendi";
+        public static string ParentDeleted = "Veli Silindi";
+        public static string ParentUpdated = "Veli Güncellendi";
+        public static string ParentDetail = "Veli detayı getirildi";
+        public static string ParentNameInvalid = "Veli ismi geçersiz";
+        public static string ParentListed = "Veli listelendi";
     }
 }

@@ -22,6 +22,12 @@ namespace Business.DependencyResolvers.Autofac
             //Teacher
             builder.RegisterType<TeacherManager>().As<ITeacherService>().SingleInstance();
             builder.RegisterType<EfTeacherDal>().As<ITeacherDal>().SingleInstance();
+
+            //Guardian
+            builder.RegisterType<ParentManager>().As<IParentService>().SingleInstance();
+            builder.RegisterType<EfParentDal>().As<IParentDal>().SingleInstance();
+
+
         }
 
     }

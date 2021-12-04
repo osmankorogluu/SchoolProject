@@ -10,8 +10,9 @@ namespace Entities.Concrete
     public class StudentDetailDto : IDto
     {
         public int StudentId { get; set; }
-        public int TeacherId { get; set; }// yeni ekledim
-        public string Name { get; set; }
+        public string TeacherName { get; set; }
+        public string StudentName { get; set; }
+        public string ParentName { get; set; }
         public string Surname { get; set; }
         public int IdentificationNumber { get; set; }
         public int Class { get; set; }

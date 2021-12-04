@@ -15,9 +15,9 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-0A073BJ\SQLEXPRESS;Database=SchoolProject;Trusted_Connection=true");
         }
    
-
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Parent> Parents { get; set; }
         
     }
 }

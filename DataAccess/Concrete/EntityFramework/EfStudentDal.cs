@@ -2,7 +2,6 @@
 using Core.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
-
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,28 +18,31 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (SchoolDatabaseContext context = new SchoolDatabaseContext())
             {
-                var result = from c in context.Students
-                             join b in context.Teachers
-                             on c.TeacherId equals b.TeacherId
+                var result = from t in context.Teachers
+                             join s in context.Students
+                             on t.TeacherId equals s.TeacherId
+                            
 
-
+                           
                              select new StudentDetailDto
                              {
-                                 StudentId = c.StudentId,
-                                 TeacherId = c.TeacherId,
-                                 Surname = c.Surname,
-                                 Class = c.Class,
-                                 Gender = c.Gender,
-                                 District = c.District,
-                                 City = c.City,
-                                 Section = c.Section,
-                                 Name = c.Name,
-                                 Phone = c.Phone,
-                                 IdentificationNumber=c.IdentificationNumber,
+                                 StudentId = s.StudentId,
+                                 TeacherName = t.Name,
+                                 City = s.City,
+                                 Class = s.Class,
+                                 District = s.District,
+                                 Gender = s.Gender,
+                                 StudentName = s.Name,
+                                 IdentificationNumber = s.IdentificationNumber,
+                                 Phone = s.Phone,
+                                 Section = s.Section,
+                                 Surname = s.Surname
 
                              };
                 return result.ToList();
+
             }
+
         }
 
 

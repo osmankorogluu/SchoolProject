@@ -16,7 +16,7 @@ namespace ConsoleUI
             {
                 foreach (var student in result.Data)
                 {
-                    Console.WriteLine(student.Name + "/" + student.City + "/" + student.Phone + "/" + student.TeacherId );
+                    Console.WriteLine(student.StudentName + "/" + student.City + "/" + student.Phone + "/" + student.TeacherName );
                 }
 
             }
