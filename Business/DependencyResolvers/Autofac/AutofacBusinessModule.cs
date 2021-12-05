@@ -27,6 +27,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ParentManager>().As<IParentService>().SingleInstance();
             builder.RegisterType<EfParentDal>().As<IParentDal>().SingleInstance();
 
+            //Project
+            builder.RegisterType<ProjectManager>().As<IProjectService>().SingleInstance();
+            builder.RegisterType<EfProjectDal>().As<IProjectDal>().SingleInstance();
 
         }
 

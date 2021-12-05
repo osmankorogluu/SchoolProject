@@ -32,5 +32,13 @@ namespace Business.Constants
         public static string ParentDetail = "Veli detayı getirildi";
         public static string ParentNameInvalid = "Veli ismi geçersiz";
         public static string ParentListed = "Veli listelendi";
+
+        //Project
+        public static string ProjectAdded = "Proje Eklendi";
+        public static string ProjectDeleted = "Proje Silindi";
+        public static string ProjectUpdated = "Proje Güncellendi";
+        public static string ProjectDetail = "Proje detayı getirildi";
+        public static string ProjectNameInvalid = "Proje ismi geçersiz";
+        public static string ProjectListed = "Proje listelendi";
     }
 }
