@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns;
 
 using Core.Utilities.Results.Abstract;
@@ -29,9 +30,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Student>>(_studentDal.GetAll(), Messages.StudentListed);
         }
 
+        [ValidationAspect(typeof(StudentValidator))]
         public IResult Add(Student student)
         {
-            ValidationTool.Validate(new StudentValidator(), student);
             _studentDal.Add(student);
             return new SuccessResult(Messages.StudentAdded);
         }
